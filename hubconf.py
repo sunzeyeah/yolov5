@@ -77,9 +77,10 @@ def yolov5n(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=Tr
     return _create('yolov5n', pretrained, channels, classes, autoshape, _verbose, device)
 
 
-def yolov5s(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
+def yolov5s(model_path, pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
     # YOLOv5-small model https://github.com/ultralytics/yolov5
-    return _create('yolov5s', pretrained, channels, classes, autoshape, _verbose, device)
+    # return _create('yolov5s', pretrained, channels, classes, autoshape, _verbose, device)
+    return custom(model_path, autoshape, _verbose, device)
 
 
 def yolov5m(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
@@ -117,9 +118,10 @@ def yolov5l6(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=T
     return _create('yolov5l6', pretrained, channels, classes, autoshape, _verbose, device)
 
 
-def yolov5x6(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
+def yolov5x6(model_path, pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
     # YOLOv5-xlarge-P6 model https://github.com/ultralytics/yolov5
-    return _create('yolov5x6', pretrained, channels, classes, autoshape, _verbose, device)
+    # return _create('yolov5x6', pretrained, channels, classes, autoshape, _verbose, device)
+    return custom(model_path, autoshape, _verbose, device)
 
 
 if __name__ == '__main__':
